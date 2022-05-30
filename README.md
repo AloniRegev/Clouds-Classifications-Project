@@ -22,5 +22,5 @@ Classify clouds using radar images into 11 different classifications:
 
 
 ### Authors: 
-* Neta Oren
+* [Neta Oren](https://github.com/n242)
 * [Regev Aloni](https://github.com/AloniRegev)
