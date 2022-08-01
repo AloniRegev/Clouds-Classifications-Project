@@ -1,6 +1,10 @@
 # Defense Against Adversarial Examples in NN
 Final project in a Deep Learning course at the University of Haifa. 
 
+### Authors: 
+* [Neta Oren](https://github.com/n242)
+* [Regev Aloni](https://github.com/AloniRegev)
+
 ## Objective:
 Adversarial examples are inputs to the model, for instance a deep neural network, which meant to cause the model to misclassify, hence significantly damage its accuracy. 
 
@@ -19,7 +23,7 @@ The `.ipynb` file is divided into sections according to the steps applied descri
 ## Details
 * **Attacks:** `Deep fool`, `Fast Gradient Sign Method attack (FGSM)`.
 * **Defenses:** Adversarial training, feature squeezing in the form of median smoothing (median filter)
-* **Dataset:** `Cifar10`, Collection of 60,000 32x32 color images in 10 different classes.
+* **Dataset:** `CIFAR-10`, Collection of 60,000 32x32 color images in 10 different classes.
 
 ### Background
 *	**DeepFool attack** - finds the closest separating hyperplane between classes, then projects the given image onto that hyperplane and shifts it by minimal distance such that it is misclassified. Meaning the attack misclassifies the input it with the minimal perturbation possible. 
@@ -47,6 +51,9 @@ Accuracy of the final model on the test set (in percent):
 
 Graphs for training of the clean model:
 
+![avg train acc vs avg validation acc](/Graphs/avg-train-acc-vs-avg-validation-acc.png)
+![avg train loss vs avg validation loss](/Graphs/avg-train-loss-vs-avg-validation-loss.png)
+
 ## Conclusions
 *	We can see that both defenses of feature squeezing and adversarial training hasn’t significantly impacted the test accuracy of the model, we reached 80% accuracy and 81% vs. the original 88%.  Meaning the requirement of in adversarial examples to reverse the effects of the adversarial perturbations; and on legitimate examples, not to significantly impact a classifier’s predictions was achieved.
 * It shows that feature squeezing as a defense is more effective against DeepFool rather than FGSM attack (77% accuracy vs. 45% accuracy). Perhaps because FGSM attack does not take the minimal change possible in order to mislead the classifier, as we used a non-negligible parameter of 0.1 epsilon.
@@ -60,6 +67,4 @@ Yet, significantly improves the model accuracy against both, as both attacks had
 3. [DeepFool: a simple and accurate method to fool deep neural networks](https://arxiv.org/pdf/1511.04599.pdf)
 4. [Adversarial Attack and Defense on Neural Networks in PyTorch](https://towardsdatascience.com/adversarial-attack-and-defense-on-neural-networks-in-pytorch-82b5bcd9171)
 
-### Authors: 
-* [Neta Oren](https://github.com/n242)
-* [Regev Aloni](https://github.com/AloniRegev)
+
