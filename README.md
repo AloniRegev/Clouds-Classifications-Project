@@ -45,7 +45,7 @@ Accuracy of the final model on the test set (in percent):
 
 | Defense \ Attack | DeepFool (%) | FGSM (%) | None (%) |
 |---|---|---|---|
-| None | 7.4 | 0.1 | 88.5 |
+| None | 7.4 | 9.93 | 88.5 |
 | Adversarial training |   | 76.9 | 81.5 |
 | Feature squeezing | 77.5 | 45.3 | 80.1 |
 
